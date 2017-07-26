@@ -34,7 +34,7 @@ RUN \
 
 # /app - this is default resin app
 WORKDIR /app
-ENV INITSYSTEM on
+ENV INITSYSTEM off
 COPY entry.sh /usr/bin/entry.sh  
 COPY run.sh .
 
