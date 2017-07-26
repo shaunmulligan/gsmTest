@@ -1,5 +1,4 @@
-#FROM resin/intel-nuc-debian:latest
-FROM debian:latest
+FROM resin/intel-nuc-debian:latest
 
 ENV LANG C.UTF-8
 ENV DEBIAN_FRONTEND noninteractive
@@ -36,6 +35,6 @@ RUN \
 # /app - this is default resin app
 WORKDIR /app
 
-
+COPY entry.sh /usr/bin/entry.sh  
 COPY run.sh .
 CMD ["bash", "/app/run.sh"]
