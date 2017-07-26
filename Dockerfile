@@ -2,7 +2,6 @@
 FROM debian:latest
 
 ENV LANG C.UTF-8
-# ENV INITSYSTEM on
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN \
@@ -31,11 +30,10 @@ RUN \
   libsmbclient \
   libssh-4 \
   fbset \
-  libexpat-dev 
+  libexpat-dev && \
+  apt-get clean && rm -rf /var/lib/apt/lists/*
 
-RUN apt-get clean  && rm -rf /var/lib/apt/lists/*
-
-# /data - this is default resin app
+# /app - this is default resin app
 WORKDIR /app
 
 
