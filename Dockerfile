@@ -1,4 +1,5 @@
-FROM resin/intel-nuc-debian:latest
+#FROM resin/intel-nuc-debian:latest
+FROM debian:latest
 
 ENV LANG C.UTF-8
 ENV INITSYSTEM on
