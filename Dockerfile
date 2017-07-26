@@ -1,12 +1,12 @@
 #FROM resin/intel-nuc-debian:latest
-FROM debian:latest
+FROM debian:stable-slim
 
 ENV LANG C.UTF-8
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN \
   apt-get update && \
-  apt-get install -y \
+  apt-get install -y --no-install-recommends \
   gtk2-engines \
   libswt-gtk-3-java \
   libxtst6 libxxf86vm1  \
