@@ -2,7 +2,8 @@
 FROM debian:latest
 
 ENV LANG C.UTF-8
-ENV INITSYSTEM on
+# ENV INITSYSTEM on
+ENV DEBIAN_FRONTEND noninteractive
 
 RUN \
   apt-get update && \
